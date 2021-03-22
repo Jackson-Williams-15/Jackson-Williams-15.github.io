@@ -3,17 +3,29 @@ body {
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.assignment{
+.assignment {
     display: flex;
     padding:10px;
     margin:10px;
     background: lightgray;
+    border-radius: 5px;
 }
-.assignment img{
+.assignment img {
     width: 200px;
-    padding:10px;
+    margin:10px;
+    border: 2px solid purple;
 }
-h1{
+.assignment img:hover{
+    border:2px solid lightgray;
+}
+h1 {
     color:darkslateblue;
     text-align:center;
+}
+a {
+    text-decoration: none ;
+    color: purple;
+}
+a:hover {
+color: white;
 }
