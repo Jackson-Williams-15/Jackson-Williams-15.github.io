@@ -3,10 +3,15 @@ body {
     font-family:Arial, Helvetica, sans-serif;
 }
 
+.assignmnts {
+    display:flex;
+    flex-wrap:wrap;
+}
 .assignment {
-    display: flex;
+    width:22%;
     padding:10px;
     margin:10px;
+    padding: 20px 10px;
     background: lightgray;
     border-radius: 5px;
 }
@@ -14,6 +19,8 @@ body {
     width: 200px;
     margin:10px;
     border: 2px solid purple;
+    display:block;
+    margin:auto;
 }
 .assignment img:hover{
     border:2px solid lightgray;
@@ -22,6 +29,10 @@ h1 {
     color:darkslateblue;
     text-align:center;
 }
+h1:hover {
+    color:darkslateblue
+}
+
 a {
     text-decoration: none ;
     color: purple;
