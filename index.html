@@ -1,118 +1,375 @@
 <!DOCTYPE html>
-<html>
-
-    <head>
-        <title>CSCE 190: Jackson Williams</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
 <body>
-    <h1>Jackson Williams' CSCE 190 Site</h1>
-
-    <div class="assignments">
-    <!--Problem Statment Assignment-->
-        <section class="assignment">
-            <a href="files/CSCE190 Problem Statement.pdf">
-                <img src="images/problem statement.PNG">
-            </a>
-            <section class="ass-details">
-                <a href="files/CSCE190 Problem Statement.pdf">
-                    <h2>Problem Statement: Calorie Tracker</h2>
-                </a>
-                <p>
-            Our users are not properly keeping track of how many calories they are taking in each day. Most users don’t have time to manually keep track of how much they are eating. Our solution will help users by tracking their caloric intake automatically.   
-                </p>
+    <nav id="desktop-nav">
+        <div class="logo">Jackson Williams</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Jackson Williams</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about"  onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience"  onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/my-profile-pic.png" alt="Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title"> Jackson Williams</h1>
+            <p class="section__text__p2"> Frontend Developer</p>
+            <div class="btn-container">
+                <button 
+                class="btn btn-color-2" 
+                onclick="window.open('./assets/Resume_Jackson_Williams.pdf')"
+                >
+                Download Resume
+            </button>
+                <button 
+                class="btn btn-color-1" 
+                onclick="location.href='./#contact'">
+                Contact Info
+            </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="linkedin profile" 
+                class="icon" 
+                onclick="location.href='https://www.linkedin.com/in/jackson-williams-45b640292/'"
+                >
+                <img src="./assets/github.png" alt="github profile" 
+                class="icon" 
+                onclick="location.href='https://github.com/Jackson-Williams-15'"
+                >
+            </div>
+        </div>
     </section>
-        </section>
-
-        <!--Affinity Diagram Assignment-->
-        <section class="assignment">
-            <a href="files/affinity-diagram.pdf">
-                <img src="images/affinity-diagram.PNG">
-            </a>
-            <section class="ass-details">
-                <a href="files/affinity-diagram.pdf">
-                    <h2>Affinity Diagram: Calorie Tracker</h2>
-                </a>
-                <p>
-        My group and I worked together to create ideas for our calorie tracker app.
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img 
+                    src="./assets/temp-about-pic.png" 
+                    alt="profile pic"
+                    class="about-pic"
+                    >
+            </div>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <img 
+                        src="./assets/experience.png" 
+                        alt="Experience"
+                        class="icon"
+                        >
+                        <h3>Experience</h3>
+                        <p>2+ years <br />Frontend Developement</p>
+                </div>
+                <div class="details-container">
+                    <img 
+                        src="./assets/education.png" 
+                        alt="education"
+                        class="icon"
+                        >
+                        <h3>Education</h3>
+                        <p>B.S Computer Information Systems</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Facilis in vel, facere ratione perferendis dolor culpa. 
+                Libero obcaecati cumque distinctio quibusdam itaque. 
+                Itaque, temporibus sequi explicabo dolorum fuga nostrum architecto animi, 
+                suscipit quia distinctio ea assumenda. Laborum autem dicta optio eaque, 
+                voluptas hic similique nisi numquam nihil, illo quasi nesciunt?
                 </p>
+            </div>
+        </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" 
+        onclick="location.href='./#experience'"
+        >
     </section>
-        </section>
-
-    <!--Personna Assignment-->
-        <section class="assignment">
-            <a href="files/personna.pdf.pdf">
-                <img src="images/personna.png.PNG">
-            </a>
-        <section class="ass-details">
-                <a href="files/personna.pdf.pdf">
-                    <h2>Personna: People who will use our app</h2>
-                </a>
-                <p>
-    Personnas for typical people who will use a calorie tracker app.
-                </p>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Developement</h2>
+                    <div class="article-container">
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>Material UI</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>REACT</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>TypeScript</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Backend Developement</h2>
+                    <div class="article-container">
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>PostgreSQL</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>Node JS</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>Git</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img 
+                        src="./assets/checkmark.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        >
+                        <div>
+                            <h3>MySQL</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                </div>
+                </div>
+            </div>
+        </div>
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow" 
+        class="icon arrow" 
+        onclick="location.href='./#projects'"
+        >
     </section>
-        </section>
-
-    <!--Sketch Assignment-->
-        <section class="assignment">
-            <a href="files/Sketchingpdf">
-                <img src="images/sketches.PNG">
-            </a>
-        <section class="ass-details">
-                <a href="files/Sketching.pdf">
-                    <h2>sketches</h2>
-                </a>
-                <p>
-    These are ideas of what our app could possibly look like.
-                </p>
+    <section id="projects">
+        <p class="section__text__p1">Browse My</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img 
+                    src="./assets/Gaming project.png" 
+                    alt="Project 1"
+                    class="project-img"
+                    >
+                </div>
+                <h2 class="experience-sub-title project-title">Group Gaming Webapp</h2>
+                <div class="btn-container">
+                    <button 
+                    class="btn btn-color-2 project-btn" 
+                    onclick="location.
+                    href='https://github.com/SCCapstone/PalmettoProgrammers'">
+                        Github
+                    </button>
+                    <button 
+                    class="btn btn-color-2 project-btn" 
+                    onclick="location.
+                    href='https://www.youtube.com/watch?v=jp-dW9j6vXE'">
+                        Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img 
+                    src="./assets/Gaming project.png" 
+                    alt="Project 1"
+                    class="project-img"
+                    >
+                </div>
+                <h2 class="experience-sub-title project-title">Group Gaming Webapp</h2>
+                <div class="btn-container">
+                    <button 
+                    class="btn btn-color-2 project-btn" 
+                    onclick="location.
+                    href='https://github.com/SCCapstone/PalmettoProgrammers'">
+                        Github
+                    </button>
+                    <button 
+                    class="btn btn-color-2 project-btn" 
+                    onclick="location.
+                    href='https://www.youtube.com/watch?v=jp-dW9j6vXE'">
+                        Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img 
+                    src="./assets/Gaming project.png" 
+                    alt="Project 1"
+                    class="project-img"
+                    >
+                </div>
+                <h2 class="experience-sub-title project-title">Group Gaming Webapp</h2>
+                <div class="btn-container">
+                    <button 
+                    class="btn btn-color-2 project-btn" 
+                    onclick="location.
+                    href='https://github.com/SCCapstone/PalmettoProgrammers'">
+                        Github
+                    </button>
+                    <button 
+                    class="btn btn-color-2 project-btn" 
+                    onclick="location.
+                    href='https://www.youtube.com/watch?v=jp-dW9j6vXE'">
+                        Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow" 
+        class="icon arrow" 
+        onclick="location.href='./#projects'"
+        >
     </section>
-        </section>
-
- <!--Paper prototype Assignment-->
-        <section class="assignment">
-            <a href="https://youtu.be/5C24LULAiKs">
-                <img src="images/Paper-Prototype.PNG">
-            </a>
-        <section class="ass-details">
-                <a href="https://youtu.be/5C24LULAiKs">
-                    <h2>Paper Protoype</h2>
-                </a>
-                <p>
-    A paper walkthrough of a specific scenario within the application. 
-                </p>
-    </section>
-        </section>
-     <!--Hi-fi prototype Assignment-->
-     <section class="assignment">
-        <a href="files/high-fi-prototype/index.html">
-            <img src="images/High-fi-prototype.PNG">
-        </a>
-    <section class="ass-details">
-            <a href="files/high-fi-prototype/index.html">
-                <h2>High-fi Protoype of calorie tracker app</h2>
-            </a>
-            <p>
-Different scenarios and ways of using our app in a high-fi-prototype. 
-            </p>
-</section>
- </section>
-
- <!--final presentationAssignment-->
- <section class="assignment">
-    <a href="https://www.youtube.com/watch?v=sBcmAyvy4Bk">
-        <img src="images/PRESENTATION.PNG">
-    </a>
-<section class="ass-details">
-        <a href="https://www.youtube.com/watch?v=sBcmAyvy4Bk">
-            <h2>Presentation of prototype</h2>
-        </a>
-        <p>
-A short presentation of our calorie tracker app and how it functions.  
-        </p>
-</section>
-</section>
-    </div>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:jackwilliams.1630@gmail.com">jackwilliams.1630@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/jackson-williams-45b640292/">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+    <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2024 Jackson Williams. All Rights Reserved.</p>
+      </footer>
+ <script src="script.js"></script>
 </body>
 </html>
