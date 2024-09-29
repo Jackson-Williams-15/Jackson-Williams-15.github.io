@@ -309,6 +309,11 @@ section {
     margin: auto 0;
 }
 
+.text-container {
+    font-size: 14px;
+    text-indent: 0.5rem
+}
+
 /* EXPERIENCE */
 
 #experience {
